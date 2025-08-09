@@ -1,0 +1,10 @@
+
+1.	Get-NetFirewallRule
+2.	wf.msc
+3.	netsh advfirewall firewall show rule name=all
+4.	netsh advfirewall firewall add rule name="Block Telnet Port 23" dir=in action=block protocol=TCP localport=23
+5.	pkgmgr /iu:"TelnetClient"
+6.	telnet localhost 23
+7.	netsh advfirewall firewall add rule name="Allow_SSH_22" dir=in action=allow protocol=6 localport=22
+8.	netsh advfirewall firewall show rule name="Allow_SSH_22"
+9.	netsh advfirewall firewall delete rule name="Block_Telnet_23"
